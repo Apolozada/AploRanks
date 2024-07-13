@@ -1,0 +1,9 @@
+name: ApoloRanks
+version: 1.0
+depend: [Vault]
+soft-depend: [PlaceholderAPI]
+main: apolocode.ranks.ApoloRanks
+authors: [ Apolo ]
+commands:
+  rankup:
+  ranks:

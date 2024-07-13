@@ -1,0 +1,46 @@
+#################################################
+#                   ApoloRanks                  #
+#               Plugin by: Apolo                #
+#            Plugin exclusivo da ApoloCode      #
+#               © Copyright ApoloCode           #
+#################################################
+
+#Prefix of messages
+Prefixo:
+  Ativar: true
+  Prefixo: '&e&lRANKUP &8»'
+
+#Configurações de conexão
+MySQL:
+  Ativar: false #Caso esteja "true" será utilizado a conexão "MySQL"
+  Host: 'localhost:3306'
+  Database: 'database'
+  ser: 'root'
+  password: ''
+
+Scoreboard:
+  Score: '&cUltimo rank.' #Representação na scoreboard
+
+Formatting:
+  - '' #Deixe vazio
+  - 'K'
+  - 'M'
+  - 'B'
+  - 'T'
+  - 'Q'
+  - 'QQ'
+  - 'S'
+  - 'SS'
+  - 'OC'
+  - 'N'
+  - 'D'
+  - 'UN'
+  - 'DD'
+  - 'TR'
+  - 'QR'
+  - 'QD'
+  - 'SD'
+  - 'SPD'
+  - 'OD'
+  - 'ND'
+  - 'VG'

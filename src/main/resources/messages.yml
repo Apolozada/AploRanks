@@ -1,0 +1,7 @@
+#Messages plugin
+Messages:
+  ActionBar: true
+  Players:
+    NoHaveMoney: '&cVocê não possui dinheiro para upar para o rank {rank_name}&c.'
+    LastRank: '&cVocê está no último rank.'
+    UpNextRank: '&aVocê upou para o rank {rank_name}&a.'

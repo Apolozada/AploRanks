@@ -1,0 +1,32 @@
+#Crie quantos ranks quiser!
+Ranks:
+  StoneIII:
+    Name: '&7[Pedra III]'
+    Icon:
+      Material: 'STONE:0'
+      Lore:
+        - ''
+        - '&eEsse é o rank inicial.'
+    Commands:
+      - ''
+    Cust: 0
+  StoneII:
+    Name: '&7[Pedra II]'
+    Icon:
+      Material: 'STONE:0'
+      Lore:
+        - ''
+        - '&fCusto &e{cust}&f.'
+    Commands:
+      - 'money give {player} 1000'
+    Cust: 1000
+  StoneI:
+    Name: '&7[Pedra I]'
+    Icon:
+      Material: 'STONE:0'
+      Lore:
+        - ''
+        - '&fCusto &e{cust}&f.'
+    Commands:
+      - 'money give {player} 10000'
+    Cust: 10000
