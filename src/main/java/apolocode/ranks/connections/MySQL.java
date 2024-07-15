@@ -28,7 +28,7 @@ public class MySQL implements IDatabase {
     public void openConnection() {
         val host = config.getString("MySQL.Host");
         val user = config.getString("MySQL.User");
-        val database = config.getString("MySQL.DB");
+        val database = config.getString("MySQL.Database");
         val password = config.getString("MySQL.Password");
         val url = "jdbc:mysql://" + host + "/" + database + "?autoReconnect=true";
 

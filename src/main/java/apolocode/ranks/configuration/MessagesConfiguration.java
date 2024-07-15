@@ -15,7 +15,7 @@ public class MessagesConfiguration {
 
     public void loadConfig() {
 
-        actionBar = config.getBoolean("Messages.Actionbar");
+        actionBar = config.getBoolean("Messages.ActionBar");
 
         noHaveMoney = getMessage("NoHaveMoney");
         lastRank = getMessage("LastRank");
@@ -23,7 +23,7 @@ public class MessagesConfiguration {
 
     }
 
-    private String getMessage( String key) {
+    private String getMessage(String key) {
         return config.getString("Messages.Players." + key);
     }
 }

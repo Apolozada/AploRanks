@@ -36,31 +36,32 @@ public class RankUpCommand implements CommandExecutor {
         if (user == null) return true;
 
         val nextRank = user.getNextRank(user);
-
-        if (!economy.has(player, nextRank.getCust())) {
-            if (messagesConfiguration.isActionBar())
-                ApoloUtils.sendActionBar(messagesConfiguration.getNoHaveMoney().replace("{rank_name}", nextRank.getName()), player);
-
-            ApoloUtils.sendMessage(player, messagesConfiguration.getNoHaveMoney().replace("{rank_name}", nextRank.getName()));
-            return true;
-        }
+        if (nextRank == null) return true;
 
         if (user.isMaxRank(user)) {
             if (messagesConfiguration.isActionBar())
                 ApoloUtils.sendActionBar(messagesConfiguration.getLastRank(), player);
+            else
+                ApoloUtils.sendMessage(player, messagesConfiguration.getLastRank());
+            return true;
+        }
 
-            ApoloUtils.sendMessage(player, messagesConfiguration.getLastRank());
+        if (!economy.has(player, nextRank.getCust())) {
+            if (messagesConfiguration.isActionBar())
+                ApoloUtils.sendActionBar(messagesConfiguration.getNoHaveMoney().replace("{rank_name}", nextRank.getName()), player);
+            else
+                ApoloUtils.sendMessage(player, messagesConfiguration.getNoHaveMoney().replace("{rank_name}", nextRank.getName()));
             return true;
         }
 
         user.setRank(nextRank);
-        economy.withdrawPlayer(player, nextRank.getCust());
+        economy.bankWithdraw(player.getName(), nextRank.getCust());
         ApoloUtils.runCommandList(player, nextRank.getCommands());
 
         if (messagesConfiguration.isActionBar())
             ApoloUtils.sendActionBar(messagesConfiguration.getUpNextRank().replace("{rank_name}", user.getRank().getName()), player);
-
-        ApoloUtils.sendMessage(player, messagesConfiguration.getUpNextRank().replace("{rank_name}", user.getRank().getName()));
+        else
+            ApoloUtils.sendMessage(player, messagesConfiguration.getUpNextRank().replace("{rank_name}", user.getRank().getName()));
 
         return false;
     }

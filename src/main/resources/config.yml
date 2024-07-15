@@ -8,15 +8,15 @@
 #Prefix of messages
 Prefixo:
   Ativar: true
-  Prefixo: '&e&lRANKUP &8»'
+  Prefix: '&e&lRANKUP &8»'
 
 #Configurações de conexão
 MySQL:
   Ativar: false #Caso esteja "true" será utilizado a conexão "MySQL"
   Host: 'localhost:3306'
   Database: 'database'
-  ser: 'root'
-  password: ''
+  User: 'root'
+  Password: ''
 
 Scoreboard:
   Score: '&cUltimo rank.' #Representação na scoreboard

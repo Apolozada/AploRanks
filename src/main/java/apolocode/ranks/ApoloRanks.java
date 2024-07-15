@@ -79,11 +79,12 @@ public final class ApoloRanks extends JavaPlugin {
     private void registerYaml() {
         DataManager.createFolder("cache");
 
+        DataManager.createConfig("messages");
+
         messagesConfiguration = new MessagesConfiguration();
         messagesConfiguration.loadConfig();
 
         DataManager.createConfig("inventories");
-        DataManager.createConfig("messages");
         DataManager.createConfig("ranks");
         saveDefaultConfig();
 
